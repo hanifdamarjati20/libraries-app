@@ -1,0 +1,38 @@
+﻿<Window x:Class="PerpusDong.View.DaftarAnggotaPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PerpusDong.View"
+        mc:Ignorable="d"
+        Title="DaftarAnggotaPage" Height="450" Width="800" Background="CornflowerBlue">
+    <Grid>
+        <Canvas Background="White" Margin="10,122,10,10">
+            <StackPanel Canvas.Left="0" Canvas.Top="10" Width="752">
+                <DataGrid x:Name="dgAnggota" x:Uid="dgAnggota" ItemsSource="{Binding}" Height="auto" AutoGenerateColumns="False" SelectedIndex="0" Margin="10,0,0,0">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding id_anggota}" Header="Id Anggota" Width="90" />
+                        <DataGridTextColumn Binding="{Binding nama_anggota}" Header="Nama" Width="90" />
+                        <DataGridTextColumn Binding="{Binding telepon_anggota}" Header="No. Telepon" Width="90" />
+                        <DataGridTextColumn Binding="{Binding alamat_anggota}" Header="Alamat" Width="90" />
+                        <DataGridTextColumn Binding="{Binding jenis_kel_anggota}" Header="Jenis Kelamin" Width="90" />
+                        <DataGridTextColumn Binding="{Binding tempat_lahir_anggota}" Header="Tempat Lahir" Width="90" />
+                        <DataGridTextColumn Binding="{Binding tanggal_lahir_anggota}" Header="Tanggal Lahir" Width="90" />
+                        <DataGridTextColumn Binding="{Binding tanggal_daftar}" Header="Tanggal Daftar" Width="90" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+        </Canvas>
+        <Canvas Background="White" Opacity="0.7" Margin="0,0,0,355">
+            <Button x:Name="btnKembali" Width="50" FontSize="12" Background="White" Canvas.Left="10" Canvas.Top="10" Height="44"  Click="btnKembali_Click">
+                <Image Source="..\\Image\93634.png" VerticalAlignment="Center"/>
+            </Button>
+        </Canvas>
+        <Label x:Name="lblAnggota1" Content="Anggota" Foreground="Black" 
+               FontSize="26" FontWeight="Medium" HorizontalAlignment="Center" Margin="262,10,262,355"/>
+        <Button x:Name="btnDaftarAnggota" Content="Daftar Anggota" HorizontalAlignment="Center" Margin="10,102,674,0" VerticalAlignment="Top" Width="108" Background="Blue" FontSize="12" FontWeight="Bold" Foreground="White" RenderTransformOrigin="-0.287,0.55" Click="btnDaftarAnggota_Click"/>
+        <Button x:Name="btnInputAnggota" Content="Input Anggota" HorizontalAlignment="Center" Margin="118,102,566,0" VerticalAlignment="Top" Width="108" Background="Blue" FontSize="12" FontWeight="Bold" Foreground="White" RenderTransformOrigin="1.963,0.3" Click="btnInputAnggota_Click"/>
+
+
+    </Grid>
+</Window>
